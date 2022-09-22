@@ -3494,11 +3494,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagochi.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagochi.Android.csproj",
       "projectName": "Tamagochi.Android",
-      "projectPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagochi.Android.csproj",
+      "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagochi.Android.csproj",
       "packagesPath": "C:\\Users\\Stephan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.Android\\obj\\",
+      "outputPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3519,8 +3519,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
-              "projectPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj"
+            "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
+              "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj"
             }
           }
         }

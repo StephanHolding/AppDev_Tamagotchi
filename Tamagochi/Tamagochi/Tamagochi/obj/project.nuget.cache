@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xnb5PRyJ78dzoruojCijnP+RgA8KZV1goOWPWV8Mh71qB5tUMvkYEgSMldygxKy8CuITEPc1CO8Q6D0Gsy9f7w==",
+  "dgSpecHash": "cIYHRFLXw73NnlJ4l9wEED57uJovzIMRYyhW8lMswr8lBA89k8uLNaozA5s4NGZPJref9YqyvKcA4y9tPzo25Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj",
+  "projectFilePath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stephan\\.nuget\\packages\\fody\\6.6.3\\fody.6.6.3.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

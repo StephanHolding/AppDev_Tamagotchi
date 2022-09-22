@@ -8,9 +8,14 @@ namespace Tamagochi.Service_Locator
 	{
 		public Service()
 		{
+			ProvideMyselfToServiceLocator();
+		}
+
+		protected void ProvideMyselfToServiceLocator()
+		{
 			if (!ServiceLocator.ProvideService(this))
 			{
-				throw new Exception("Kan niet he");
+				throw new Exception("The Service could not be provided");
 			}
 		}
 	}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj": {}
+    "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj": {
+    "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
         "projectName": "Tamagochi.iOS",
-        "projectPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
+        "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
         "packagesPath": "C:\\Users\\Stephan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
-                "projectPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj"
+              "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
+                "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
+    "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj",
+        "projectUniqueName": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj",
         "projectName": "Tamagochi",
-        "projectPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj",
+        "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj",
         "packagesPath": "C:\\Users\\Stephan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi\\obj\\",
+        "outputPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

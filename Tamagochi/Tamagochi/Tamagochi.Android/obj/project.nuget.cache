@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yw6yCGH3s0EmWqfdA2R5HT88hSFLyPVB7qB47aNNYdytktzDdIlRWJtsbLRosN6YoEIeeOg33/LXOp2hAYoW0Q==",
+  "dgSpecHash": "KuMmsMiWEooBEHW9vEF68SGKC5ZknNl9uCLeH9maAKJYz8g98d4fwJpbfWmwEsM5oBAC+tZPbUzCashGiHYjog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagochi.Android.csproj",
+  "projectFilePath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagochi.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stephan\\.nuget\\packages\\fody\\6.6.3\\fody.6.6.3.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\propertychanged.fody\\4.0.3\\propertychanged.fody.4.0.3.nupkg.sha512",

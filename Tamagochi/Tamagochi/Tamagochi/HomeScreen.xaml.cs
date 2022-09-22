@@ -23,7 +23,7 @@ namespace Tamagochi
 			InitializeComponent();
 
 			creatureInstance = ServiceLocator.LocateService<Creature>();
-			creatureInstance.onDialogueUpdated += UpdateDialogueText;
+			creatureInstance.OnDialogueUpdated += UpdateDialogueUIText;
 			
 			creatureInstance.Speak(new string[] 
 			{
@@ -46,7 +46,7 @@ namespace Tamagochi
 			HintText.Text = "";
 		}
 
-		private void UpdateDialogueText()
+		private void UpdateDialogueUIText()
 		{
 			string dialogueMessage = creatureInstance.GetCurrentDisplayingMessage();
 
