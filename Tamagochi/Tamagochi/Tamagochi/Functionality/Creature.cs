@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using Tamagochi.Service_Locator;
+using Tamagotchi.Functionality;
 using Xamarin.Forms.Internals;
 
 namespace Tamagochi.Functionality
 {
 	internal class Creature : Service
 	{
-		public Resource[] resources = null;
+		public Resource[] resources;
 
 		public delegate void CreatureEvent();
 		public event CreatureEvent OnDialogueUpdated;
@@ -17,6 +18,14 @@ namespace Tamagochi.Functionality
 		private string currentDialogueToSpeak = "";
 		private string CurrentDialogueToSpeak { get { return currentDialogueToSpeak; } set { currentDialogueToSpeak = value; OnDialogueUpdated?.Invoke(); } }
 		private Queue<string> messageQueue = new Queue<string>();
+
+		public Creature()
+		{
+			resources = new Resource[]
+			{
+				new Resource_Food()
+			};
+		}
 
 		public void Speak(params string[] messages)
 		{
