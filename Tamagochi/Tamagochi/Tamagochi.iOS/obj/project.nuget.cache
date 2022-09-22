@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "KzsYeabPPM/l79X8wxDyk5j6v3WMC3gQlko3fAbvHhBGTIEJo6T/Q4mkCsZOIhne6b27Fi5uX0X1aRnbzpxnbg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Stephan\\Documents\\HKU\\KernModule\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Stephan\\.nuget\\packages\\fody\\6.6.3\\fody.6.6.3.nupkg.sha512",
+    "C:\\Users\\Stephan\\.nuget\\packages\\propertychanged.fody\\4.0.3\\propertychanged.fody.4.0.3.nupkg.sha512",
+    "C:\\Users\\Stephan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Stephan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Stephan\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
