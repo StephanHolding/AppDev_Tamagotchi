@@ -1,0 +1,48 @@
+@startuml
+
+title Tamagotchi
+
+Service <|-- Creature
+ServiceLocator *. Creature : contains
+ContentPage <|-- HomePage
+HomePage - ServiceLocator : retrieves service from
+HomePage - Creature : subscribes to event
+note top of ContentPage : Xamarin code \nniet relevant voor deze opdracht
+
+class Creature
+{
+ -string currentDialogueToSpeak
+ -string CurrentDialogueToSpeak <<property>>
+ -Queue<string> messageQueue
+
+ +void Speak(params string[])
+ +void CreatureEvent() OnDialogueUpdated <<event>>
+ +void ContinueDialogue()
+ +string GetCurrentDialogue()
+}
+
+class Service
+{
+#void ProvideMyselfToServiceLocator()
+}
+
+class ServiceLocator <<static>>
+{
+-Dictionary<Type, Service> services
+
++void ProvideService(Service)
++T LocateService<T>() <i>where T inherits from Service</i>
+}
+
+class HomePage
+{
+ -void UpdateDialogueUIText()
+}
+
+class ContentPage
+{
+
+}
+
+
+@enduml

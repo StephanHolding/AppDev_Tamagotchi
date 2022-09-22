@@ -196,7 +196,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Tamagochi/1.0.0": {
+      "Tamagotchi/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -205,10 +205,10 @@
           "Xamarin.Forms": "5.0.0.2196"
         },
         "compile": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         }
       }
     },
@@ -407,7 +407,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Tamagochi/1.0.0": {
+      "Tamagotchi/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -416,10 +416,10 @@
           "Xamarin.Forms": "5.0.0.2196"
         },
         "compile": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         }
       }
     },
@@ -618,7 +618,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Tamagochi/1.0.0": {
+      "Tamagotchi/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -627,10 +627,10 @@
           "Xamarin.Forms": "5.0.0.2196"
         },
         "compile": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         }
       }
     },
@@ -829,7 +829,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Tamagochi/1.0.0": {
+      "Tamagotchi/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -838,10 +838,10 @@
           "Xamarin.Forms": "5.0.0.2196"
         },
         "compile": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Tamagochi.dll": {}
+          "bin/placeholder/Tamagotchi.dll": {}
         }
       }
     }
@@ -1206,15 +1206,15 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Tamagochi/1.0.0": {
+    "Tamagotchi/1.0.0": {
       "type": "project",
-      "path": "../Tamagochi/Tamagochi.csproj",
-      "msbuildProject": "../Tamagochi/Tamagochi.csproj"
+      "path": "../Tamagochi/Tamagotchi.csproj",
+      "msbuildProject": "../Tamagochi/Tamagotchi.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
-      "Tamagochi >= 1.0.0",
+      "Tamagotchi >= 1.0.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196"
     ]
@@ -1226,9 +1226,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagotchi.iOS.csproj",
       "projectName": "Tamagochi.iOS",
-      "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
+      "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagotchi.iOS.csproj",
       "packagesPath": "C:\\Users\\Stephan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\obj\\",
       "projectStyle": "PackageReference",
@@ -1251,8 +1251,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj": {
-              "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagochi.csproj"
+            "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagotchi.csproj": {
+              "projectPath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi\\Tamagotchi.csproj"
             }
           }
         }

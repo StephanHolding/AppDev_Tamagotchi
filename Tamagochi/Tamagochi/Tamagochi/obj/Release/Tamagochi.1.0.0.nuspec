@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Tamagochi</id>
+    <version>1.0.0</version>
+    <authors>Tamagochi</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="PropertyChanged.Fody" version="4.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Essentials" version="1.7.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2196" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi\bin\Release\netstandard2.0\Tamagochi.dll" target="lib\netstandard2.0\Tamagochi.dll" />
+  </files>
+</package>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kohXh8Jw6lQe4AQZi33NSjsCW24UtITYeEnBUs95Cp6P8/tyvrByP4JDr9VC6+dZrMcCUvrqIbE30JvOYWKzfw==",
+  "dgSpecHash": "kgqHHx8hqyPXAT892tzEC444hrCSsaGfZtJVR08IdoocyTw9F18nDf0JpOkEdvmyfiulprOCzu1mX359r+DkRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagochi.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagotchi.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stephan\\.nuget\\packages\\fody\\6.6.3\\fody.6.6.3.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\propertychanged.fody\\4.0.3\\propertychanged.fody.4.0.3.nupkg.sha512",
