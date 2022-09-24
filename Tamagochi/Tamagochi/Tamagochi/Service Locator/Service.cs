@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tamagochi.Service_Locator
+namespace Tamagotchi.Service_Locator
 {
-	internal abstract class Service
+	public abstract class Service
 	{
 		public Service()
 		{

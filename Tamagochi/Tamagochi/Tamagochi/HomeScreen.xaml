@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tamagochi.HomeScreen">
+             x:Class="Tamagotchi.HomeScreen">
     <StackLayout Orientation="Vertical" Margin="0,20,0,0">
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Hunger" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button Text="100%" BackgroundColor="Green" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
+                <Button x:Name="HungerValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Thirst" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button Text="100%" BackgroundColor="Green" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToThirstPage"/>
+                <Button x:Name="ThirstValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToThirstPage"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Attention" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button Text="100%" BackgroundColor="Green" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
+                <Button x:Name="AttentionValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
             </StackLayout>
             
         </StackLayout>
@@ -28,9 +28,7 @@
             <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25"  Clicked="DialogueBoxClicked"/>
             <Image Source="pogO.png"/>
         </StackLayout>
-
-        <!--<Entry x:Name="textEntry" Placeholder="Enter text here..." HorizontalTextAlignment="Center"/>
-        <Button Text="Submit" BorderWidth="5" Clicked="Button_Clicked"/>-->
+        
     </StackLayout>
 
 </ContentPage>

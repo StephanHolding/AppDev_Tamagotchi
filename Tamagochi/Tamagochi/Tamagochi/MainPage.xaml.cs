@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Tamagochi.Functionality;
+using Tamagotchi.Functionality;
 using Tamagotchi.Functionality;
 
-namespace Tamagochi
+namespace Tamagotchi
 {
 	public partial class MainPage : ContentPage
 	{

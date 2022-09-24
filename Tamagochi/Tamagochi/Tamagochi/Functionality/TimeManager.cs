@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Timers;
-using Tamagochi;
-using Tamagochi.Service_Locator;
+using Tamagotchi;
+using Tamagotchi.Service_Locator;
 using Xamarin.Essentials;
 
 namespace Tamagotchi.Functionality
@@ -13,7 +13,7 @@ namespace Tamagotchi.Functionality
 		public delegate void TimeElapsedEvent(double timeElapsedInMiliseconds);
 		public event TimeElapsedEvent OnTimeElapsed;
 
-		public const double TIMER_INTERVAL = 1000.0;
+		public const double TIMER_INTERVAL = 5000.0;
 		private const string TIMER_PREF_KEY = "TimerKey";
 		private DateTime timeAtAppSleep = DateTime.UtcNow;
 

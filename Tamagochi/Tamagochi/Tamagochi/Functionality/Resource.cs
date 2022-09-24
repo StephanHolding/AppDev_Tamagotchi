@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Essentials;
-using Tamagochi.Service_Locator;
+using Tamagotchi.Service_Locator;
 using Tamagotchi.Functionality;
 
-namespace Tamagochi.Functionality
+namespace Tamagotchi.Functionality
 {
 	public abstract class Resource
 	{
@@ -21,15 +21,30 @@ namespace Tamagochi.Functionality
 			public string dialogueLine;
 		}
 
-		public string resourceDisplayName=  "NULL";
-		public float currentValue = 1;
+		public delegate void ResourceEvent(float currentValue);
+		private event ResourceEvent OnResourceChanged;
+
+		public float CurrentValue { get; protected set; } = 1;
 		public float resourceDecreaseAmountAfterEachTimerEvent = 0.1f;
 		public ResourceThreshold[] resourceThresholds;
 
-		protected Resource()
+		private Creature owner;
+
+		protected Resource(Creature owner)
 		{
+			this.owner = owner;
 			ServiceLocator.LocateService<TimeManager>().OnTimeElapsed += TimeElapsed;
 			App.OnAppSleep += OnSleep;
+		}
+
+		public void AssignResourceListener(ResourceEvent function)
+		{
+			OnResourceChanged += function;
+		}
+
+		public void RemoveResourceListener(ResourceEvent function)
+		{
+			OnResourceChanged -= function;
 		}
 
 		private void OnSleep()
@@ -45,18 +60,22 @@ namespace Tamagochi.Functionality
 
 		protected void IncreaseResourceValue(float amount)
 		{
-			if (currentValue + amount >= 1)
-				currentValue += amount;
+			if (CurrentValue + amount <= 1)
+				CurrentValue += amount;
 			else
-				currentValue = 1;
+				CurrentValue = 1;
+
+			OnResourceChanged?.Invoke(CurrentValue);
 		}
 
 		protected void DecreaseResourceValue(float amount)
 		{
-			if (currentValue - amount >= 0)
-				currentValue -= amount;
+			if (CurrentValue - amount >= 0)
+				CurrentValue -= amount;
 			else
-				currentValue = 0;
+				CurrentValue = 0;
+
+			OnResourceChanged?.Invoke(CurrentValue);
 		}
 
 		protected abstract void SaveData();

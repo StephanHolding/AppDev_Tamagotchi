@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tamagochi.Service_Locator
+namespace Tamagotchi.Service_Locator
 {
 	internal static class ServiceLocator
 	{

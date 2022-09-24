@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tamagochi.Functionality;
+using Tamagotchi.Functionality;
 using Xamarin.Essentials;
 
 namespace Tamagotchi.Functionality
 {
 	internal class Resource_Food : Resource
 	{
-		public Resource_Food()
+		public Resource_Food(Creature owner) : base(owner)
 		{
-			this.resourceDisplayName = "Food";
-			this.currentValue = Preferences.Get(nameof(Resource_Food), 1.0f);
-			this.resourceDecreaseAmountAfterEachTimerEvent = 0.1f;
+			//this.CurrentValue = Preferences.Get(nameof(Resource_Food), 1.0f);
+			this.resourceDecreaseAmountAfterEachTimerEvent = 0.001f;
 
 			this.resourceThresholds = new ResourceThreshold[]
 			{
@@ -24,7 +23,7 @@ namespace Tamagotchi.Functionality
 
 		protected override void SaveData()
 		{
-			Preferences.Set(nameof(Resource_Food), currentValue);
+			Preferences.Set(nameof(Resource_Food), CurrentValue);
 		}
 	}
 }

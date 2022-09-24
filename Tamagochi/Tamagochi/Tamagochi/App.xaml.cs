@@ -1,10 +1,10 @@
 ﻿using System;
-using Tamagochi.Functionality;
+using System.Linq;
 using Tamagotchi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Tamagochi
+namespace Tamagotchi
 {
 	public partial class App : Application
 	{
@@ -22,6 +22,11 @@ namespace Tamagochi
 			InitializeComponent();
 
 			MainPage = new NavigationPage(new HomeScreen());
+		}
+
+		public static bool IsPageActive(Page page)
+		{
+			return Current.MainPage.Navigation.NavigationStack.Last() == page;
 		}
 
 		protected override void OnStart()

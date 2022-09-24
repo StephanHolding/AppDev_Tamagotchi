@@ -638,3 +638,4 @@ C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagoch
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\res\drawable\food_icon.png
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\res\drawable\drink_icon.png
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\res\drawable\heart_icon.png
+C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\crc641d0ce3bdcf2b6528\MainActivity.java

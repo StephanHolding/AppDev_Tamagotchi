@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tamagochi.Service_Locator;
-using Tamagochi.Functionality;
+using Tamagotchi.Service_Locator;
+using Tamagotchi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Tamagotchi;
 
-namespace Tamagochi
+namespace Tamagotchi
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class HomeScreen : ContentPage
 	{
 
-		Creature creatureInstance;
+		private Creature creatureInstance;
 
 		public HomeScreen()
 		{
@@ -25,7 +24,10 @@ namespace Tamagochi
 
 			creatureInstance = ServiceLocator.LocateService<Creature>();
 			creatureInstance.OnDialogueUpdated += UpdateDialogueUIText;
-			
+			creatureInstance.AssignResourceEvent<Resource_Food>(UpdateHungerMeter);
+			//creatureInstance.AssignResourceEvent<Resource_Drink>(UpdateThirstMeter);
+			//creatureInstance.AssignResourceEvent<Resource_Attention>(UpdateAttentionMeter);
+
 			creatureInstance.Speak(new string[] 
 			{
 				"Hello",
@@ -33,12 +35,6 @@ namespace Tamagochi
 				"That means the Service Locator and Observer pattern are working!",
 				"Promise..." 
 			});
-		}
-
-
-		private void Button_Clicked(object sender, EventArgs e)
-		{
-			//creatureInstance.Speak(textEntry.Text);
 		}
 
 		private void DialogueBoxClicked(object sender, EventArgs e)
@@ -50,16 +46,24 @@ namespace Tamagochi
 		private void UpdateDialogueUIText()
 		{
 			string dialogueMessage = creatureInstance.GetCurrentDisplayingMessage();
+			DialogueText.Text = dialogueMessage;
+		}
 
-			if (string.IsNullOrEmpty(dialogueMessage))
-			{
-				//DialogueText.IsVisible = false;
-			}
-			else
-			{
-				DialogueText.Text = dialogueMessage;
-				//DialogueText.IsVisible = true;
-			}
+		private void UpdateHungerMeter(float hungerPercentage)
+		{
+			string percentage = (hungerPercentage * 100).ToString() + "%";
+			Console.WriteLine("HUNGER UPDATED: " + percentage);
+			HungerValue.Text = percentage;
+		}
+
+		private void UpdateThirstMeter(float thirstPercentage)
+		{
+
+		}
+
+		private void UpdateAttentionMeter(float attentionPercentage)
+		{
+
 		}
 
 		private void GoToHungerPage(object sender, EventArgs e)

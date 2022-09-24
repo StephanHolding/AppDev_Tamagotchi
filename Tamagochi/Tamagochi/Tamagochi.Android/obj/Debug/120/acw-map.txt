@@ -1,6 +1,6 @@
-Tamagochi.Droid.MainActivity, Tamagochi.Android;crc64f4daba9cede24292.MainActivity
-Tamagochi.Droid.MainActivity;crc64f4daba9cede24292.MainActivity
-tamagochi.droid.MainActivity;crc64f4daba9cede24292.MainActivity
+Tamagotchi.Droid.MainActivity, Tamagochi.Android;crc641d0ce3bdcf2b6528.MainActivity
+Tamagotchi.Droid.MainActivity;crc641d0ce3bdcf2b6528.MainActivity
+tamagotchi.droid.MainActivity;crc641d0ce3bdcf2b6528.MainActivity
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner

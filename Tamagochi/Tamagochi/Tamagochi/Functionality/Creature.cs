@@ -2,29 +2,42 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using Tamagochi.Service_Locator;
+using Tamagotchi.Service_Locator;
 using Tamagotchi.Functionality;
 using Xamarin.Forms.Internals;
 
-namespace Tamagochi.Functionality
+namespace Tamagotchi.Functionality
 {
-	internal class Creature : Service
+	public class Creature : Service
 	{
-		public Resource[] resources;
 
 		public delegate void CreatureEvent();
 		public event CreatureEvent OnDialogueUpdated;
 
+		private Dictionary<Type, Resource> resources = new Dictionary<Type, Resource>();
 		private string currentDialogueToSpeak = "";
 		private string CurrentDialogueToSpeak { get { return currentDialogueToSpeak; } set { currentDialogueToSpeak = value; OnDialogueUpdated?.Invoke(); } }
 		private Queue<string> messageQueue = new Queue<string>();
 
 		public Creature()
 		{
-			resources = new Resource[]
-			{
-				new Resource_Food()
-			};
+			resources.Add(typeof(Resource_Food), new Resource_Food(this));
+			resources.Add(typeof(Resource_Drink), new Resource_Drink(this));
+		}
+
+		//public float GetResourceValue<T>() where T : Resource
+		//{
+		//	return resources[typeof(T)].currentValue;
+		//}
+
+		public void AssignResourceEvent<T>(Resource.ResourceEvent resourceEvent) where T : Resource
+		{
+			resources[typeof(T)].AssignResourceListener(resourceEvent);
+		}
+
+		public void RemoveResourceEvent<T>(Resource.ResourceEvent resourceEvent) where T : Resource
+		{
+			resources[typeof(T)].RemoveResourceListener(resourceEvent);
 		}
 
 		public void Speak(params string[] messages)

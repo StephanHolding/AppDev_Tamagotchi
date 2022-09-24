@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Tamagochi.iOS
+namespace Tamagotchi.iOS
 {
     public class Application
     {

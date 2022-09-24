@@ -3,18 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Tamagotchi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Tamagotchi.Service_Locator;
+using Tamagotchi.Functionality;
 
 namespace Tamagotchi
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DrinkPage : ContentPage
 	{
+
+		private Creature creatureInstance;
+
 		public DrinkPage()
 		{
 			InitializeComponent();
+
+			creatureInstance = ServiceLocator.LocateService<Creature>();
+			creatureInstance.AssignResourceEvent<Resource_Drink>(UpdateThirstMeter);
+		}
+
+		~DrinkPage()
+		{
+			creatureInstance.RemoveResourceEvent<Resource_Drink>(UpdateThirstMeter);
+		}
+
+		private void UpdateThirstMeter(float thirstPercentage)
+		{
+
 		}
 	}
 }

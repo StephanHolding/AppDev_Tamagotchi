@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static Tamagochi.Functionality.Resource;
 using Xamarin.Essentials;
-using Tamagochi.Functionality;
+using Tamagotchi.Functionality;
 
 namespace Tamagotchi.Functionality
 {
 	internal class Resource_Drink : Resource
 	{
-		public Resource_Drink()
+		public Resource_Drink(Creature owner) : base(owner)
 		{
-			this.resourceDisplayName = "Thirst";
-			this.currentValue = Preferences.Get(nameof(Resource_Drink), 1.0f);
-			this.resourceDecreaseAmountAfterEachTimerEvent = 0.1f;
+			//this.CurrentValue = Preferences.Get(nameof(Resource_Drink), 1.0f);
+			this.resourceDecreaseAmountAfterEachTimerEvent = 0.001f;
 
 			this.resourceThresholds = new ResourceThreshold[]
 			{
@@ -25,7 +23,7 @@ namespace Tamagotchi.Functionality
 
 		protected override void SaveData()
 		{
-			Preferences.Set(nameof(Resource_Drink), currentValue);
+			Preferences.Set(nameof(Resource_Drink), CurrentValue);
 		}
 	}
 }

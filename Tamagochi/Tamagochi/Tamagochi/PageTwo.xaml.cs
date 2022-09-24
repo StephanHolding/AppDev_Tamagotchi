@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Tamagochi
+namespace Tamagotchi
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PageTwo : ContentPage

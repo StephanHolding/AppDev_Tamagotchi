@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Tamagotchi.MainPage.xaml", "MainPage.xaml", typeof(global::Tamagochi.MainPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Tamagotchi.MainPage.xaml", "MainPage.xaml", typeof(global::Tamagotchi.MainPage))]
 
-namespace Tamagochi {
+namespace Tamagotchi {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("MainPage.xaml")]
