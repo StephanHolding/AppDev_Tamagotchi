@@ -5,7 +5,7 @@
 
     <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Please enter your first name below:" FontSize="Large"/>
-        <Entry Placeholder="Your name..."/>
+        <Entry Placeholder="Your name..." x:Name="NameInput"/>
         <Button Text="Submit" Clicked="Submit"/>
     </StackLayout>
     

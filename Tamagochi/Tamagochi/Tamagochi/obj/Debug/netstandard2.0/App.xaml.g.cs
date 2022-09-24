@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Tamagochi.App.xaml", "App.xaml", typeof(global::Tamagochi.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Tamagotchi.App.xaml", "App.xaml", typeof(global::Tamagochi.App))]
 
 namespace Tamagochi {
     

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Tamagochi.HomeScreen.xaml", "HomeScreen.xaml", typeof(global::Tamagochi.HomeScreen))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Tamagotchi.HomeScreen.xaml", "HomeScreen.xaml", typeof(global::Tamagochi.HomeScreen))]
 
 namespace Tamagochi {
     

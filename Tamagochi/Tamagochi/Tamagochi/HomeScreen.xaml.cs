@@ -7,6 +7,7 @@ using Tamagochi.Service_Locator;
 using Tamagochi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Tamagotchi;
 
 namespace Tamagochi
 {
@@ -52,28 +53,28 @@ namespace Tamagochi
 
 			if (string.IsNullOrEmpty(dialogueMessage))
 			{
-				DialogueText.IsVisible = false;
+				//DialogueText.IsVisible = false;
 			}
 			else
 			{
 				DialogueText.Text = dialogueMessage;
-				DialogueText.IsVisible = true;
+				//DialogueText.IsVisible = true;
 			}
 		}
 
 		private void GoToHungerPage(object sender, EventArgs e)
 		{
-			//goto
+			Navigation.PushAsync(new FoodPage());
 		}
 
 		private void GoToAttentionPage(object sender, EventArgs e)
 		{
-			//goto
+			Navigation.PushAsync(new AttentionPage());
 		}
 
 		private void GoToThirstPage(object sender, EventArgs e)
 		{
-			//goto
+			Navigation.PushAsync(new DrinkPage());
 		}
 	}
 }

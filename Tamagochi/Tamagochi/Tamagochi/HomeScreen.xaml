@@ -2,17 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tamagochi.HomeScreen">
-    <StackLayout Orientation="Vertical" >
+    <StackLayout Orientation="Vertical" Margin="0,20,0,0">
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
-            <Button Text="hunger" CornerRadius="25" Clicked="GoToHungerPage"/>
-            <Button Text="thirst" CornerRadius="25" Clicked="GoToThirstPage"/>
-            <Button Text="attention" CornerRadius="25" Clicked="GoToAttentionPage"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Hunger" FontSize="Medium" HorizontalOptions="Center"/>
+                <Button Text="100%" BackgroundColor="Green" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Thirst" FontSize="Medium" HorizontalOptions="Center"/>
+                <Button Text="100%" BackgroundColor="Green" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToThirstPage"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Attention" FontSize="Medium" HorizontalOptions="Center"/>
+                <Button Text="100%" BackgroundColor="Green" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
+            </StackLayout>
+            
         </StackLayout>
 
-        <StackLayout Orientation="Vertical" Padding="50" HeightRequest="200" VerticalOptions="Center" Spacing="50">
+        <StackLayout Orientation="Vertical" Padding="50" HeightRequest="200" VerticalOptions="Center" Spacing="20">
             <Label x:Name="HintText" Text="Press the text bubble to continue" HorizontalOptions="Center"/>
-            <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25" Clicked="DialogueBoxClicked"/>
+            <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25"  Clicked="DialogueBoxClicked"/>
             <Image Source="pogO.png"/>
         </StackLayout>
 

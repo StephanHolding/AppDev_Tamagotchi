@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tamagotchi.FoodPage">
+    <ContentPage.Content>
+        
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+
+            <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="0,40,0,0">
+                <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25"/>
+                <Image Source="pogO.png" Scale="2" Margin="80"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Padding="0,0,0,60">
+                <Button Text="Feed"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

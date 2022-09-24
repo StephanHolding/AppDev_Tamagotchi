@@ -6,16 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Tamagochi.Functionality;
+using Tamagotchi.Functionality;
 
 namespace Tamagochi
 {
 	public partial class MainPage : ContentPage
 	{
-		private Creature creatureInstance;
 
 		public MainPage()
 		{
-			creatureInstance = new Creature();
 			BindingContext = this;
 
 			InitializeComponent();
@@ -23,6 +22,7 @@ namespace Tamagochi
 
 		private void Submit(object sender, EventArgs e)
 		{
+			Settings.playerName = NameInput.Text;
 			Navigation.PushAsync(new HomeScreen());
 		}
 	}
