@@ -17,7 +17,7 @@
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Padding="0,0,0,25">
-                <Button Text="Give Drink"/>
+                <Button Text="Give Drink" Clicked="GiveDrink"/>
             </StackLayout>
 
         </StackLayout>

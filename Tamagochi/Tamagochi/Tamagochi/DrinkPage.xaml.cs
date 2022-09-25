@@ -7,7 +7,6 @@ using Tamagotchi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tamagotchi.Service_Locator;
-using Tamagotchi.Functionality;
 
 namespace Tamagotchi
 {
@@ -33,6 +32,12 @@ namespace Tamagotchi
 		private void UpdateThirstMeter(float thirstPercentage)
 		{
 
+		}
+
+		private void GiveDrink(object sender, EventArgs e)
+		{
+			creatureInstance.AddToResource<Resource_Drink>(Settings.RESOURCE_ADD_AMOUNT);
+			creatureInstance.Speak("Thank you for giving me something to drink");
 		}
 	}
 }

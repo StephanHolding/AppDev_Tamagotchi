@@ -40,6 +40,11 @@ namespace Tamagotchi.Functionality
 			resources[typeof(T)].RemoveResourceListener(resourceEvent);
 		}
 
+		public void AddToResource<T>(float amount)
+		{
+			resources[typeof(T)].IncreaseResourceValue(amount);
+		}
+
 		public void Speak(params string[] messages)
 		{
 			foreach (string message in messages)
