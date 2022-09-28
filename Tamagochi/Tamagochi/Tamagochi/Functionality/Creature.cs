@@ -25,7 +25,7 @@ namespace Tamagotchi.Functionality
 			resources.Add(typeof(Resource_Attention), new Resource_Attention(this));
 		}
 
-		public double GetResourceValue<T>() where T : Resource
+		public int GetResourceValue<T>() where T : Resource
 		{
 			return resources[typeof(T)].CurrentValue;
 		}
@@ -40,7 +40,7 @@ namespace Tamagotchi.Functionality
 			resources[typeof(T)].RemoveResourceListener(resourceEvent);
 		}
 
-		public void AddToResource<T>(float amount)
+		public void AddToResource<T>(int amount)
 		{
 			resources[typeof(T)].IncreaseResourceValue(amount);
 		}
@@ -64,8 +64,6 @@ namespace Tamagotchi.Functionality
 				CurrentDialogueToSpeak = messageQueue.Dequeue();
 			else
 				CurrentDialogueToSpeak = "";
-
-			Console.WriteLine("CURRENT DIALOGUE: " + currentDialogueToSpeak);
 		}
 
 		public string GetCurrentDisplayingMessage()

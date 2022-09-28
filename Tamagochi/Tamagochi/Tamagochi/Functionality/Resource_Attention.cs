@@ -11,9 +11,10 @@ namespace Tamagotchi.Functionality
 		{
 			this.resourceThresholds = new ResourceThreshold[]
 			{
-				new ResourceThreshold(0.8f, "I am getting a little thirsty..."),
-				new ResourceThreshold(0.4f, "Please give me something to drink."),
-				new ResourceThreshold(0.15f, "I'm so dehydrated, please I need something to drink...")
+				new ResourceThreshold(95, "Can you leave me alone for a while"),
+				new ResourceThreshold(60, "It's fun to spend time with you :)"),
+				new ResourceThreshold(40, "I'm starting to feel a little lonely now"),
+				new ResourceThreshold(15, "I'm so lonely...")
 			};
 		}
 

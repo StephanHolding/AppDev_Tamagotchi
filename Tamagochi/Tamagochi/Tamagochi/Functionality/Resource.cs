@@ -13,21 +13,21 @@ namespace Tamagotchi.Functionality
 	{
 		public struct ResourceThreshold
 		{
-			public ResourceThreshold(float threshold, string line)
+			public ResourceThreshold(int threshold, string line)
 			{
 				this.thresholdPercentage = threshold;
 				this.dialogueLine = line;
 			}
 
-			public float thresholdPercentage;
+			public int thresholdPercentage;
 			public string dialogueLine;
 		}
 
-		public delegate void ResourceEvent(double _currentValue);
+		public delegate void ResourceEvent(int _currentValue);
 		private event ResourceEvent OnResourceChanged;
 
-		public double CurrentValue { get; set; } = 1;
-		public double resourceDecreaseAmountAfterEachTimerEvent = 0.01;
+		public int CurrentValue { get; set; } = 100;
+		protected int resourceDecreaseAmountAfterEachTimerEvent = 1;
 		public ResourceThreshold[] resourceThresholds;
 
 		private Creature owner;
@@ -56,11 +56,18 @@ namespace Tamagotchi.Functionality
 
 		private void TimeElapsed(double amountOfTimeInMilliseconds)
 		{
-			int eventTriggerAmount = (int)Math.Floor(amountOfTimeInMilliseconds / TimeManager.TIMER_INTERVAL);
-			DecreaseResourceValue(resourceDecreaseAmountAfterEachTimerEvent * eventTriggerAmount);
+			if (amountOfTimeInMilliseconds != TimeManager.TIMER_INTERVAL)
+			{
+				int eventTriggerAmount = (int)Math.Floor(amountOfTimeInMilliseconds / TimeManager.TIMER_INTERVAL);
+				DecreaseResourceValue(resourceDecreaseAmountAfterEachTimerEvent * eventTriggerAmount);
+			}
+			else
+			{
+				DecreaseResourceValue(resourceDecreaseAmountAfterEachTimerEvent);
+			}
 		}
 
-		public void IncreaseResourceValue(double amount)
+		public void IncreaseResourceValue(int amount)
 		{
 			if (CurrentValue + amount <= 1)
 				CurrentValue += amount;
@@ -70,14 +77,14 @@ namespace Tamagotchi.Functionality
 			OnResourceChanged?.Invoke(CurrentValue);
 		}
 
-		protected void DecreaseResourceValue(double amount)
+		protected void DecreaseResourceValue(int amount)
 		{
 			if (CurrentValue - amount >= 0)
 				CurrentValue -= amount;
 			else
 				CurrentValue = 0;
 
-			OnResourceChanged.Invoke(CurrentValue);
+			OnResourceChanged?.Invoke(CurrentValue);
 			CheckVoiceLineThreshold();
 		}
 
@@ -99,6 +106,4 @@ namespace Tamagotchi.Functionality
 		protected abstract void SaveData();
 
 	}
-
-
 }

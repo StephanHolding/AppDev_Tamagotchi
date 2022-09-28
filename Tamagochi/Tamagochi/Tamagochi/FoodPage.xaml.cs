@@ -35,11 +35,12 @@ namespace Tamagotchi
 			creatureInstance.RemoveResourceEvent<Resource_Food>(UpdateFoodMeter);
 		}
 
-		private void UpdateFoodMeter(double hungerPercentage)
+		private void UpdateFoodMeter(int hungerPercentage)
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
 				HungerValue.Text = CommonFunctionality.ConvertToPercentageText(hungerPercentage);
+				HungerValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(hungerPercentage, 100, 25);
 			});
 		}
 

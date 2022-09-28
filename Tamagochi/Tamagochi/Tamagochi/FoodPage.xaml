@@ -8,7 +8,7 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="25">
                 <Label Text="Hunger" FontSize="Title" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                <Button x:Name="HungerValue" Text="100%" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center"/>
+                <Button x:Name="HungerValue" Text="100%"  TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="0,30,0,0">

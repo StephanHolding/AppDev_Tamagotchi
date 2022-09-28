@@ -34,11 +34,12 @@ namespace Tamagotchi
 			creatureInstance.RemoveResourceEvent<Resource_Drink>(UpdateThirstMeter);
 		}
 
-		private void UpdateThirstMeter(double thirstPercentage)
+		private void UpdateThirstMeter(int thirstPercentage)
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
 				ThirstValue.Text = CommonFunctionality.ConvertToPercentageText(thirstPercentage);
+				ThirstValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(thirstPercentage, 100, 25);
 			});
 		}
 

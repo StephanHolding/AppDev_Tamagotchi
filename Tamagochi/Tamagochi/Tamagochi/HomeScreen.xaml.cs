@@ -49,27 +49,30 @@ namespace Tamagotchi
 			HintText.Text = "";
 		}
 
-		private void UpdateHungerMeter(double hungerPercentage)
+		private void UpdateHungerMeter(int hungerPercentage)
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
 				HungerValue.Text = CommonFunctionality.ConvertToPercentageText(hungerPercentage);
+				HungerValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(hungerPercentage, 100, 25);
 			});
 		}
 
-		private void UpdateThirstMeter(double thirstPercentage)
+		private void UpdateThirstMeter(int thirstPercentage)
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
 				ThirstValue.Text = CommonFunctionality.ConvertToPercentageText(thirstPercentage);
+				ThirstValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(thirstPercentage, 100, 25);
 			});
 		}
 
-		private void UpdateAttentionMeter(double attentionPercentage)
+		private void UpdateAttentionMeter(int attentionPercentage)
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
 				AttentionValue.Text = CommonFunctionality.ConvertToPercentageText(attentionPercentage);
+				AttentionValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(attentionPercentage, 50, 15);
 			});
 		}
 

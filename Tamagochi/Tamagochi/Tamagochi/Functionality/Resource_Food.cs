@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tamagotchi.Functionality;
 using Xamarin.Essentials;
 
 namespace Tamagotchi.Functionality
@@ -12,9 +11,9 @@ namespace Tamagotchi.Functionality
 		{
 			this.resourceThresholds = new ResourceThreshold[]
 			{
-				new ResourceThreshold(0.8f, "I am getting a little hungry..."),
-				new ResourceThreshold(0.4f, "Please give me something to eat."),
-				new ResourceThreshold(0.15f, "I'm starving, please I need something to eat...")
+				new ResourceThreshold(75, "I am getting a little hungry..."),
+				new ResourceThreshold(35, "Please give me something to eat."),
+				new ResourceThreshold(10, "I'm starving, please I need something to eat...")
 			};
 		}
 

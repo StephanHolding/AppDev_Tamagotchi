@@ -34,11 +34,12 @@ namespace Tamagotchi
 			creatureInstance.RemoveResourceEvent<Resource_Attention>(UpdateAttentionMeter);
 		}
 
-		private void UpdateAttentionMeter(double attentionValue)
+		private void UpdateAttentionMeter(int attentionValue)
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
 				AttentionValue.Text = CommonFunctionality.ConvertToPercentageText(attentionValue);
+				AttentionValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(attentionValue, 50, 15);
 			});
 		}
 

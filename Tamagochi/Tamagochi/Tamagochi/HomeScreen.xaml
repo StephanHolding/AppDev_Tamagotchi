@@ -8,17 +8,17 @@
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Hunger" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button  x:Name="HungerValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
+                <Button  x:Name="HungerValue" TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Thirst" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button x:Name="ThirstValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToThirstPage"/>
+                <Button x:Name="ThirstValue"  TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToThirstPage"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Attention" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button x:Name="AttentionValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
+                <Button x:Name="AttentionValue"  TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
             </StackLayout>
             
         </StackLayout>
