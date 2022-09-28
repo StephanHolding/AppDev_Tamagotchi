@@ -6,13 +6,10 @@ using Tamagotchi.Functionality;
 
 namespace Tamagotchi.Functionality
 {
-	internal class Resource_Drink : Resource
+	public class Resource_Drink : Resource
 	{
 		public Resource_Drink(Creature owner) : base(owner)
 		{
-			//this.CurrentValue = Preferences.Get(nameof(Resource_Drink), 1.0f);
-			this.resourceDecreaseAmountAfterEachTimerEvent = 0.001f;
-
 			this.resourceThresholds = new ResourceThreshold[]
 			{
 				new ResourceThreshold(0.8f, "I am getting a little thirsty..."),

@@ -8,7 +8,7 @@
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Hunger" FontSize="Medium" HorizontalOptions="Center"/>
-                <Button x:Name="HungerValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
+                <Button  x:Name="HungerValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToHungerPage"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical">

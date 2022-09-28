@@ -8,11 +8,11 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="25">
                 <Label Text="Thirst" FontSize="Title" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                <Button Text="100%" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center"/>
+                <Button x:Name="ThirstValue" BackgroundColor="Green" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="0,30,0,0">
-                <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25" IsEnabled="False"/>
+                <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25" Clicked="DialogueBoxClicked"/>
                 <Image Source="pogO.png" Scale="2" Margin="80"/>
             </StackLayout>
 

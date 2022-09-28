@@ -5,30 +5,30 @@ using System.Text;
 using Tamagotchi.Service_Locator;
 using Tamagotchi.Functionality;
 using Xamarin.Forms.Internals;
+using System.Timers;
 
 namespace Tamagotchi.Functionality
 {
 	public class Creature : Service
 	{
-
-		public delegate void CreatureEvent();
-		public event CreatureEvent OnDialogueUpdated;
+		public delegate void CreatureDialogueEvent(string dialogue);
+		public event CreatureDialogueEvent OnDialogueUpdated;
+		public string CurrentDialogueToSpeak { get { return currentDialogueToSpeak; } set { currentDialogueToSpeak = value; OnDialogueUpdated?.Invoke(currentDialogueToSpeak); } }
 
 		private Dictionary<Type, Resource> resources = new Dictionary<Type, Resource>();
 		private string currentDialogueToSpeak = "";
-		private string CurrentDialogueToSpeak { get { return currentDialogueToSpeak; } set { currentDialogueToSpeak = value; OnDialogueUpdated?.Invoke(); } }
 		private Queue<string> messageQueue = new Queue<string>();
-
 		public Creature()
 		{
 			resources.Add(typeof(Resource_Food), new Resource_Food(this));
 			resources.Add(typeof(Resource_Drink), new Resource_Drink(this));
+			resources.Add(typeof(Resource_Attention), new Resource_Attention(this));
 		}
 
-		//public float GetResourceValue<T>() where T : Resource
-		//{
-		//	return resources[typeof(T)].currentValue;
-		//}
+		public double GetResourceValue<T>() where T : Resource
+		{
+			return resources[typeof(T)].CurrentValue;
+		}
 
 		public void AssignResourceEvent<T>(Resource.ResourceEvent resourceEvent) where T : Resource
 		{
@@ -64,6 +64,8 @@ namespace Tamagotchi.Functionality
 				CurrentDialogueToSpeak = messageQueue.Dequeue();
 			else
 				CurrentDialogueToSpeak = "";
+
+			Console.WriteLine("CURRENT DIALOGUE: " + currentDialogueToSpeak);
 		}
 
 		public string GetCurrentDisplayingMessage()

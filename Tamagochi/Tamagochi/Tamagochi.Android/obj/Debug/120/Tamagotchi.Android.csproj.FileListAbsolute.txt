@@ -516,7 +516,6 @@ C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagoch
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\crc64ee486da937c010f4\FrameRenderer.java
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\crc64ee486da937c010f4\ImageRenderer.java
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\crc64ee486da937c010f4\LabelRenderer.java
-C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\crc64f4daba9cede24292\MainActivity.java
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\mono\androidx\activity\contextaware\OnContextAvailableListenerImplementor.java
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\mono\androidx\appcompat\app\ActionBar_OnMenuVisibilityListenerImplementor.java
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\mono\androidx\appcompat\app\ActionBar_OnNavigationListenerImplementor.java
@@ -639,3 +638,6 @@ C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagoch
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\res\drawable\drink_icon.png
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\res\drawable\heart_icon.png
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\src\crc641d0ce3bdcf2b6528\MainActivity.java
+C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\Tamagotchi.Android.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\Tamagotchi.Android.csproj.Fody.CopyLocal.cache
+C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\Tamagotchi.Android.csproj.Fody.RuntimeCopyLocal.cache

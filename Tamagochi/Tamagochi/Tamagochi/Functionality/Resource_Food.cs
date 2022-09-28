@@ -10,9 +10,6 @@ namespace Tamagotchi.Functionality
 	{
 		public Resource_Food(Creature owner) : base(owner)
 		{
-			//this.CurrentValue = Preferences.Get(nameof(Resource_Food), 1.0f);
-			this.resourceDecreaseAmountAfterEachTimerEvent = 0.001f;
-
 			this.resourceThresholds = new ResourceThreshold[]
 			{
 				new ResourceThreshold(0.8f, "I am getting a little hungry..."),

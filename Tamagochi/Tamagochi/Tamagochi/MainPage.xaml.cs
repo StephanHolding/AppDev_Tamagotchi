@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Tamagotchi.Functionality;
-using Tamagotchi.Functionality;
 
 namespace Tamagotchi
 {
@@ -22,7 +21,7 @@ namespace Tamagotchi
 
 		private void Submit(object sender, EventArgs e)
 		{
-			Settings.playerName = NameInput.Text;
+			CommonFunctionality.playerName = NameInput.Text;
 			Navigation.PushAsync(new HomeScreen());
 		}
 	}

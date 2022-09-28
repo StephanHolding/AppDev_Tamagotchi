@@ -7,63 +7,70 @@ using Tamagotchi.Service_Locator;
 using Tamagotchi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Timers;
 
 namespace Tamagotchi
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomeScreen : ContentPage
+	public partial class HomeScreen : ContentPage, IShowDialogue
 	{
 
-		private Creature creatureInstance;
+		public Creature creatureInstance;
 
 		public HomeScreen()
 		{
 			BindingContext = this;
 
+			creatureInstance = ServiceLocator.LocateService<Creature>();
+
 			InitializeComponent();
 
-			creatureInstance = ServiceLocator.LocateService<Creature>();
-			creatureInstance.OnDialogueUpdated += UpdateDialogueUIText;
+			creatureInstance.OnDialogueUpdated += ShowDialogue;
 			creatureInstance.AssignResourceEvent<Resource_Food>(UpdateHungerMeter);
-			//creatureInstance.AssignResourceEvent<Resource_Drink>(UpdateThirstMeter);
-			//creatureInstance.AssignResourceEvent<Resource_Attention>(UpdateAttentionMeter);
+			creatureInstance.AssignResourceEvent<Resource_Drink>(UpdateThirstMeter);
+			creatureInstance.AssignResourceEvent<Resource_Attention>(UpdateAttentionMeter);
 
-			creatureInstance.Speak(new string[] 
+			UpdateHungerMeter(creatureInstance.GetResourceValue<Resource_Food>());
+			UpdateThirstMeter(creatureInstance.GetResourceValue<Resource_Drink>());
+			UpdateAttentionMeter(creatureInstance.GetResourceValue<Resource_Attention>());
+
+			creatureInstance.Speak(new string[]
 			{
 				"Hello",
 				"if you're seeing this...",
 				"That means the Service Locator and Observer pattern are working!",
-				"Promise..." 
+				"Promise..."
 			});
 		}
 
-		private void DialogueBoxClicked(object sender, EventArgs e)
+		public void DialogueBoxClicked(object sender, EventArgs e)
 		{
 			creatureInstance.ContinueDialogue();
 			HintText.Text = "";
 		}
 
-		private void UpdateDialogueUIText()
+		private void UpdateHungerMeter(double hungerPercentage)
 		{
-			string dialogueMessage = creatureInstance.GetCurrentDisplayingMessage();
-			DialogueText.Text = dialogueMessage;
+			Device.BeginInvokeOnMainThread(() =>
+			{
+				HungerValue.Text = CommonFunctionality.ConvertToPercentageText(hungerPercentage);
+			});
 		}
 
-		private void UpdateHungerMeter(float hungerPercentage)
+		private void UpdateThirstMeter(double thirstPercentage)
 		{
-			string percentage = (hungerPercentage * 100).ToString() + "%";
-			Console.WriteLine("HUNGER UPDATED: " + percentage);
-			HungerValue.Text = percentage;
+			Device.BeginInvokeOnMainThread(() =>
+			{
+				ThirstValue.Text = CommonFunctionality.ConvertToPercentageText(thirstPercentage);
+			});
 		}
 
-		private void UpdateThirstMeter(float thirstPercentage)
+		private void UpdateAttentionMeter(double attentionPercentage)
 		{
-
-		}
-
-		private void UpdateAttentionMeter(float attentionPercentage)
-		{
-
+			Device.BeginInvokeOnMainThread(() =>
+			{
+				AttentionValue.Text = CommonFunctionality.ConvertToPercentageText(attentionPercentage);
+			});
 		}
 
 		private void GoToHungerPage(object sender, EventArgs e)
@@ -79,6 +86,11 @@ namespace Tamagotchi
 		private void GoToThirstPage(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new DrinkPage());
+		}
+
+		public void ShowDialogue(string message)
+		{
+			DialogueText.Text = message;
 		}
 	}
 }

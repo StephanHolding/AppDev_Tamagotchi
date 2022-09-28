@@ -4,6 +4,8 @@ using System.Text;
 using Xamarin.Essentials;
 using Tamagotchi.Service_Locator;
 using Tamagotchi.Functionality;
+using System.Collections.Specialized;
+using System.ComponentModel;
 
 namespace Tamagotchi.Functionality
 {
@@ -21,11 +23,11 @@ namespace Tamagotchi.Functionality
 			public string dialogueLine;
 		}
 
-		public delegate void ResourceEvent(float currentValue);
+		public delegate void ResourceEvent(double _currentValue);
 		private event ResourceEvent OnResourceChanged;
 
-		public float CurrentValue { get; protected set; } = 1;
-		public float resourceDecreaseAmountAfterEachTimerEvent = 0.1f;
+		public double CurrentValue { get; set; } = 1;
+		public double resourceDecreaseAmountAfterEachTimerEvent = 0.01;
 		public ResourceThreshold[] resourceThresholds;
 
 		private Creature owner;
@@ -58,7 +60,7 @@ namespace Tamagotchi.Functionality
 			DecreaseResourceValue(resourceDecreaseAmountAfterEachTimerEvent * eventTriggerAmount);
 		}
 
-		public void IncreaseResourceValue(float amount)
+		public void IncreaseResourceValue(double amount)
 		{
 			if (CurrentValue + amount <= 1)
 				CurrentValue += amount;
@@ -68,14 +70,14 @@ namespace Tamagotchi.Functionality
 			OnResourceChanged?.Invoke(CurrentValue);
 		}
 
-		protected void DecreaseResourceValue(float amount)
+		protected void DecreaseResourceValue(double amount)
 		{
 			if (CurrentValue - amount >= 0)
 				CurrentValue -= amount;
 			else
 				CurrentValue = 0;
 
-			OnResourceChanged?.Invoke(CurrentValue);
+			OnResourceChanged.Invoke(CurrentValue);
 			CheckVoiceLineThreshold();
 		}
 
