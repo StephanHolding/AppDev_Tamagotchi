@@ -46,7 +46,6 @@ namespace Tamagotchi
 		private void Play(object sender, EventArgs e)
 		{
 			creatureInstance.AddToResource<Resource_Attention>(CommonFunctionality.RESOURCE_ADD_AMOUNT);
-			creatureInstance.Speak("Thank you for spending time with me");
 		}
 
 		public void ShowDialogue(string message)

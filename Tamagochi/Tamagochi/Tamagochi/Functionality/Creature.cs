@@ -20,9 +20,10 @@ namespace Tamagotchi.Functionality
 		private Queue<string> messageQueue = new Queue<string>();
 		public Creature()
 		{
-			resources.Add(typeof(Resource_Food), new Resource_Food(this));
 			resources.Add(typeof(Resource_Drink), new Resource_Drink(this));
 			resources.Add(typeof(Resource_Attention), new Resource_Attention(this));
+			resources.Add(typeof(Resource_Food), new Resource_Food(this));
+			resources.Add(typeof(Resource_Sleep), new Resource_Sleep(this));
 		}
 
 		public int GetResourceValue<T>() where T : Resource
@@ -49,7 +50,8 @@ namespace Tamagotchi.Functionality
 		{
 			foreach (string message in messages)
 			{
-				messageQueue.Enqueue(message);
+				if (!string.IsNullOrEmpty(message))
+					messageQueue.Enqueue(message);
 			}
 
 			if (string.IsNullOrEmpty(CurrentDialogueToSpeak))

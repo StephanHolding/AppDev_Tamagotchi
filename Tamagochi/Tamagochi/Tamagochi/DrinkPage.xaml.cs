@@ -46,7 +46,6 @@ namespace Tamagotchi
 		private void GiveDrink(object sender, EventArgs e)
 		{
 			creatureInstance.AddToResource<Resource_Drink>(CommonFunctionality.RESOURCE_ADD_AMOUNT);
-			creatureInstance.Speak("Thank you for giving me something to drink");
 		}
 
 		public void ShowDialogue(string message)

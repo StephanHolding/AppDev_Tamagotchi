@@ -4,7 +4,7 @@
              x:Class="Tamagotchi.HomeScreen">
     <StackLayout Orientation="Vertical" Margin="0,20,0,0">
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Hunger" FontSize="Medium" HorizontalOptions="Center"/>
@@ -20,7 +20,12 @@
                 <Label Text="Attention" FontSize="Medium" HorizontalOptions="Center"/>
                 <Button x:Name="AttentionValue"  TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
             </StackLayout>
-            
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Sleep" FontSize="Medium" HorizontalOptions="Center"/>
+                <Button x:Name="SleepValue"  TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center" Clicked="GoToAttentionPage"/>
+            </StackLayout>
+
         </StackLayout>
 
         <StackLayout Orientation="Vertical" Padding="50" HeightRequest="200" VerticalOptions="Center" Spacing="20">

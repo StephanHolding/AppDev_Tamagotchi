@@ -29,10 +29,12 @@ namespace Tamagotchi
 			creatureInstance.AssignResourceEvent<Resource_Food>(UpdateHungerMeter);
 			creatureInstance.AssignResourceEvent<Resource_Drink>(UpdateThirstMeter);
 			creatureInstance.AssignResourceEvent<Resource_Attention>(UpdateAttentionMeter);
+			creatureInstance.AssignResourceEvent<Resource_Sleep>(UpdateSleepMeter);
 
 			UpdateHungerMeter(creatureInstance.GetResourceValue<Resource_Food>());
 			UpdateThirstMeter(creatureInstance.GetResourceValue<Resource_Drink>());
 			UpdateAttentionMeter(creatureInstance.GetResourceValue<Resource_Attention>());
+			UpdateSleepMeter(creatureInstance.GetResourceValue<Resource_Sleep>());
 
 			creatureInstance.Speak(new string[]
 			{
@@ -73,6 +75,15 @@ namespace Tamagotchi
 			{
 				AttentionValue.Text = CommonFunctionality.ConvertToPercentageText(attentionPercentage);
 				AttentionValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(attentionPercentage, 50, 15);
+			});
+		}
+
+		private void UpdateSleepMeter(int sleepPercentage)
+		{
+			Device.BeginInvokeOnMainThread(() =>
+			{
+				SleepValue.Text = CommonFunctionality.ConvertToPercentageText(sleepPercentage);
+				SleepValue.BackgroundColor = CommonFunctionality.CalculateStatusColor(sleepPercentage, 100, 25);
 			});
 		}
 

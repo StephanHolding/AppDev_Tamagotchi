@@ -47,7 +47,6 @@ namespace Tamagotchi
 		private void Feed(object sender, EventArgs e)
 		{
 			creatureInstance.AddToResource<Resource_Food>(CommonFunctionality.RESOURCE_ADD_AMOUNT);
-			creatureInstance.Speak("Thank you for giving me food :)");
 		}
 
 		public void ShowDialogue(string message)
