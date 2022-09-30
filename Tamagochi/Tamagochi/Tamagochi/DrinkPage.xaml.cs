@@ -43,9 +43,12 @@ namespace Tamagotchi
 			});
 		}
 
-		private void GiveDrink(object sender, EventArgs e)
+		private async void GiveDrink(object sender, EventArgs e)
 		{
 			creatureInstance.AddToResource<Resource_Drink>(CommonFunctionality.RESOURCE_ADD_AMOUNT);
+
+			await Image.TranslateTo(0, -30, 250, Easing.SinIn);
+			await Image.TranslateTo(0, 0, 250, Easing.SinIn);
 		}
 
 		public void ShowDialogue(string message)

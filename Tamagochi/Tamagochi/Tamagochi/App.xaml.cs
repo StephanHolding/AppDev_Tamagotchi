@@ -4,6 +4,8 @@ using Tamagotchi.Functionality;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Poetsen.ttf", Alias = "MainFont")]
+
 namespace Tamagotchi
 {
 	public partial class App : Application
@@ -14,18 +16,17 @@ namespace Tamagotchi
 		public static event AppEvent OnAppSleep;
 		public static event AppEvent OnAppResume;
 
-		private Color backgroundColor = Color.FromHex("202124");
+		private readonly Color backgroundColor = Color.FromHex("202124");
 
 		public App()
 		{
-			TimeManager timeManager = new TimeManager();
-			Creature creatureInstance = new Creature();
+			_ = new TimeManager();
+			_ = new Creature();
 
 			InitializeComponent();
 
 			MainPage = new NavigationPage(new HomeScreen())
 			{
-				
 				BarBackgroundColor = backgroundColor,
 				BarTextColor = Color.White,
 				BackgroundColor = backgroundColor

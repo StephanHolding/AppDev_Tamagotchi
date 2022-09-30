@@ -4,5 +4,16 @@
              x:Class="Tamagotchi.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="MainFont"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="MainFont"/>
+            </Style>
+            
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

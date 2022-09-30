@@ -13,7 +13,7 @@
 
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="0,30,0,0">
                 <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25" Clicked="DialogueBoxClicked"/>
-                <Image Source="pogO.png" Scale="2" Margin="80"/>
+                <Image x:Name="Image" Source="pogO.png" Scale="2" Margin="80"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Padding="0,0,0,25">
