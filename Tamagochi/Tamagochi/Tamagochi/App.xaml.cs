@@ -14,6 +14,8 @@ namespace Tamagotchi
 		public static event AppEvent OnAppSleep;
 		public static event AppEvent OnAppResume;
 
+		private Color backgroundColor = Color.FromHex("202124");
+
 		public App()
 		{
 			TimeManager timeManager = new TimeManager();
@@ -21,7 +23,13 @@ namespace Tamagotchi
 
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new HomeScreen());
+			MainPage = new NavigationPage(new HomeScreen())
+			{
+				
+				BarBackgroundColor = backgroundColor,
+				BarTextColor = Color.White,
+				BackgroundColor = backgroundColor
+			};
 		}
 
 		public static bool IsPageActive(Page page)

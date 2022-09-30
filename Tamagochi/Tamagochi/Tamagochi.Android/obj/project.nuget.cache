@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yyQdj8S8lWhj7HReKRK52/p4KECk7apxvHyQyh5WTWHUW2U0JSxBtPNg4svXbV79qrGJPIAmnqdNeVD6rJJVRw==",
+  "dgSpecHash": "PTXCUAXZQzByX7g044adZ2ruhEKV/fomTNslrEH7a5b06Lrc1SSrsMkrv3hRlD8H0iXbm8C9kS5dzm1fiY4E0A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.Android\\Tamagotchi.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stephan\\.nuget\\packages\\fody\\6.6.3\\fody.6.6.3.nupkg.sha512",
+    "C:\\Users\\Stephan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\propertychanged.fody\\4.0.3\\propertychanged.fody.4.0.3.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

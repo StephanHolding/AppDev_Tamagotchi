@@ -20,3 +20,4 @@ C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagoch
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi\obj\Debug\netstandard2.0\AttentionPage.xaml.g.cs
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi\obj\Debug\netstandard2.0\DrinkPage.xaml.g.cs
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi\obj\Debug\netstandard2.0\FoodPage.xaml.g.cs
+C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi\obj\Debug\netstandard2.0\SleepPage.xaml.g.cs

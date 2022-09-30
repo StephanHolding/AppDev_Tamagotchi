@@ -25,7 +25,7 @@ namespace Tamagotchi
 			creatureInstance.AssignResourceEvent<Resource_Drink>(UpdateThirstMeter);
 
 			ShowDialogue(creatureInstance.CurrentDialogueToSpeak);
-			UpdateThirstMeter(creatureInstance.GetResourceValue<Resource_Attention>());
+			UpdateThirstMeter(creatureInstance.GetResourceValue<Resource_Drink>());
 		}
 
 		~DrinkPage()

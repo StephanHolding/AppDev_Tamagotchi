@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace Tamagotchi.Functionality
 {
-	public abstract class Resource
+	public class Resource
 	{
 		public struct ResourceThreshold
 		{
@@ -37,9 +37,7 @@ namespace Tamagotchi.Functionality
 		protected Resource(Creature owner)
 		{
 			this.owner = owner;
-			Console.WriteLine("CONSTRUCTOR CALLED");
 			ServiceLocator.LocateService<TimeManager>().OnTimeElapsed += TimeElapsed;
-			App.OnAppSleep += OnSleep;
 		}
 
 		public void AssignResourceListener(ResourceEvent function)
@@ -52,16 +50,8 @@ namespace Tamagotchi.Functionality
 			OnResourceChanged -= function;
 		}
 
-		private void OnSleep()
-		{
-			SaveData();
-		}
-
 		private void TimeElapsed(double amountOfTimeInMilliseconds)
 		{
-
-			Console.WriteLine("TIME ELAPSED");
-
 			if (amountOfTimeInMilliseconds != TimeManager.TIMER_INTERVAL)
 			{
 				int eventTriggerAmount = (int)Math.Floor(amountOfTimeInMilliseconds / TimeManager.TIMER_INTERVAL);
@@ -89,8 +79,6 @@ namespace Tamagotchi.Functionality
 				CurrentValue -= amount;
 			else
 				CurrentValue = 0;
-
-			Console.WriteLine("DECREASING VALUE");
 
 			OnResourceChanged?.Invoke(CurrentValue);
 
@@ -131,8 +119,5 @@ namespace Tamagotchi.Functionality
 			succeeded = false;
 			return new ResourceThreshold(0, "");
 		}
-
-		protected abstract void SaveData();
-
 	}
 }

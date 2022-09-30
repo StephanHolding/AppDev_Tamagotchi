@@ -21,11 +21,6 @@ namespace Tamagotchi.Functionality
 			CurrentValue = 90;
 		}
 
-		protected override void SaveData()
-		{
-			Preferences.Set(nameof(Resource_Food), CurrentValue);
-		}
-
 		public override void IncreaseResourceValue(int amount)
 		{
 			base.IncreaseResourceValue(amount);

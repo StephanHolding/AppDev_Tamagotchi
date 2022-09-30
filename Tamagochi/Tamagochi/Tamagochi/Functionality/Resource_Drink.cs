@@ -20,11 +20,6 @@ namespace Tamagotchi.Functionality
 			CurrentValue = 100;
 		}
 
-		protected override void SaveData()
-		{
-			Preferences.Set(nameof(Resource_Drink), CurrentValue);
-		}
-
 		public override void IncreaseResourceValue(int amount)
 		{
 			base.IncreaseResourceValue(amount);

@@ -641,3 +641,4 @@ C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagoch
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\Tamagotchi.Android.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\Tamagotchi.Android.csproj.Fody.CopyLocal.cache
 C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\Tamagotchi.Android.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\Stephan\Documents\GitHub\AppDev_Tamagotchi\Tamagochi\Tamagochi\Tamagochi.Android\obj\Debug\120\android\assets\Newtonsoft.Json.dll

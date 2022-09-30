@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5oj8yA5SFvgi+ktTxS2w9+AoN3VMUknZkOvv7xTkvpN8p1Ndm5yqiduxWq06cnXDuJKYiiBH+uH+/aDFKnrzNA==",
+  "dgSpecHash": "9fVeG9KHOa+fxwWKrZeodsNZAI4NjLFpVsb1/PT+PEVhFtj/HjnrhdWqrKPCc1X0oSr9DIjlJRVGBWdnJPM6ww==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stephan\\Documents\\GitHub\\AppDev_Tamagotchi\\Tamagochi\\Tamagochi\\Tamagochi.iOS\\Tamagotchi.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stephan\\.nuget\\packages\\fody\\6.6.3\\fody.6.6.3.nupkg.sha512",
+    "C:\\Users\\Stephan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\propertychanged.fody\\4.0.3\\propertychanged.fody.4.0.3.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Stephan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",

@@ -6,6 +6,8 @@ using Tamagotchi.Service_Locator;
 using Tamagotchi.Functionality;
 using Xamarin.Forms.Internals;
 using System.Timers;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace Tamagotchi.Functionality
 {
@@ -18,12 +20,26 @@ namespace Tamagotchi.Functionality
 		private Dictionary<Type, Resource> resources = new Dictionary<Type, Resource>();
 		private string currentDialogueToSpeak = "";
 		private Queue<string> messageQueue = new Queue<string>();
+		private const string RESOURCE_PREF_KEY = "Resource_Data";
+
 		public Creature()
 		{
+			App.OnAppSleep += App_OnAppSleep;
+
 			resources.Add(typeof(Resource_Drink), new Resource_Drink(this));
 			resources.Add(typeof(Resource_Attention), new Resource_Attention(this));
 			resources.Add(typeof(Resource_Food), new Resource_Food(this));
 			resources.Add(typeof(Resource_Sleep), new Resource_Sleep(this));
+
+			if (Preferences.ContainsKey(RESOURCE_PREF_KEY))
+			{
+				LoadResourceData();
+			}
+		}
+
+		private void App_OnAppSleep()
+		{
+			SaveResourceData();
 		}
 
 		public int GetResourceValue<T>() where T : Resource
@@ -74,6 +90,31 @@ namespace Tamagotchi.Functionality
 				return CurrentDialogueToSpeak;
 			else
 				return "";
+		}
+
+		private void SaveResourceData()
+		{
+			Dictionary<Type, int> toSave = new Dictionary<Type, int>();
+
+			foreach (KeyValuePair<Type, Resource> pair in resources)
+			{
+				toSave.Add(pair.Key, pair.Value.CurrentValue);
+			}
+
+			string JSON = JsonConvert.SerializeObject(toSave);
+			Preferences.Set(RESOURCE_PREF_KEY, JSON);
+		}
+
+		private void LoadResourceData()
+		{
+			string JSON = Preferences.Get(RESOURCE_PREF_KEY, "");
+			Console.WriteLine(JSON);
+			Dictionary<Type, int> loaded = JsonConvert.DeserializeObject<Dictionary<Type, int>>(JSON);
+
+			foreach (KeyValuePair<Type, int> pair in loaded)
+			{
+				resources[pair.Key].CurrentValue = pair.Value;
+			}
 		}
 	}
 }

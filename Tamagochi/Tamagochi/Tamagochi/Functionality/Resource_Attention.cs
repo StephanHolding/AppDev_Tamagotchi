@@ -12,17 +12,13 @@ namespace Tamagotchi.Functionality
 			this.resourceThresholds = new ResourceThreshold[]
 			{
 				new ResourceThreshold(100, "Can you leave me alone for a while"),
+				new ResourceThreshold(90, null),
 				new ResourceThreshold(60, "It's fun to spend time with you :)"),
 				new ResourceThreshold(40, "I'm starting to feel a little lonely now"),
 				new ResourceThreshold(15, "I'm so lonely...")
 			};
 
 			CurrentValue = 50;
-		}
-
-		protected override void SaveData()
-		{
-			Preferences.Set(nameof(Resource_Attention), CurrentValue);
 		}
 
 		public override void IncreaseResourceValue(int amount)

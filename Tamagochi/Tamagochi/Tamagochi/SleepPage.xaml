@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tamagotchi.SleepPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center"  Padding="0,10,0,0">
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="25">
+                <Label Text="Sleep" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                <Button x:Name="SleepValue"  TextColor="Black" BorderColor="White" BorderWidth="1" WidthRequest="75" HeightRequest="75" CornerRadius="100" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="0,30,0,0">
+                <Button x:Name="DialogueText" BackgroundColor="White" TextColor="Black" CornerRadius="25" Clicked="DialogueBoxClicked"/>
+                <Image Source="pogO.png" Scale="2" Margin="80"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Padding="0,0,0,25">
+                <Button Text="Sleep" Clicked="Sleep"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

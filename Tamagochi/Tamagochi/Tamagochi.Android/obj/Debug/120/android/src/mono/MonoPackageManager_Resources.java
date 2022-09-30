@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "Tamagochi.Android.dll" comes first in this list. */
 		"Tamagochi.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"PropertyChanged.dll",
 		"Tamagotchi.dll",
 		"Xamarin.AndroidX.Activity.dll",

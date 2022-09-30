@@ -39,9 +39,7 @@ namespace Tamagotchi
 			creatureInstance.Speak(new string[]
 			{
 				"Hello",
-				"if you're seeing this...",
-				"That means the Service Locator and Observer pattern are working!",
-				"Promise..."
+				"Please keep me alive"
 			});
 		}
 
@@ -100,6 +98,11 @@ namespace Tamagotchi
 		private void GoToThirstPage(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new DrinkPage());
+		}
+
+		private void GoToSleepPage(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new SleepPage());
 		}
 
 		public void ShowDialogue(string message)
