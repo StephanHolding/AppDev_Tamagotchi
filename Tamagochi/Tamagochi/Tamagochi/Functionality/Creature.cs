@@ -35,6 +35,8 @@ namespace Tamagotchi.Functionality
 			{
 				LoadResourceData();
 			}
+
+			ServiceLocator.LocateService<TimeManager>().Init();
 		}
 
 		private void App_OnAppSleep()
